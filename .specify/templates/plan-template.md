@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- Security & Privacy: No default creds; secrets handled via env/secret store; no sensitive data in logs.
+- Reliability & Integrity: Storage bounds respected; no silent drops; crash-safe segment finalize.
+- Observability: Structured JSON logs; health/readiness; key metrics instrumented or planned.
+- Compatibility: No breaking API/config changes without flags/migration; upstream alignment noted.
+- Tests & Builds: Tests planned for core changes; deterministic build path captured.
 
 ## Project Structure
 
