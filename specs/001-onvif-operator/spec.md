@@ -113,6 +113,13 @@ Administrators can define default Agent configuration and per-device overrides (
 - **WrapperConfig**: Global/default configuration, discovery settings (intervals, methods, CIDRs), resource limits, naming conventions, credential sources, per-device overrides.
 - **ReconcileEvent**: Events produced during reconciliation (device offline/online, agent start/stop/restart), with timestamps and correlation IDs.
 
+## Assumptions
+
+- The Wrapper operates on a single host with sufficient privileges to spawn and manage Agent instances.
+- Administrators provide valid device credentials (global defaults and/or per-device overrides) via configuration.
+- The network environment supports at least one discovery method (multicast or CIDR scanning) within configured ranges.
+- A container runtime is available if container mode is selected; otherwise local process spawning is supported.
+
 ## Success Criteria *(mandatory)*
 
 <!--
